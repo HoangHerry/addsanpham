@@ -1,0 +1,155 @@
+/*Phần giới thiệu */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    background-image: url(./more-leaves.png);
+}
+.introduce {
+    padding: 5px 0;
+    background-color:#00483d  ;
+}
+.introduce_list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.introduce_item {
+    padding: 0 5px;
+    margin: 0 7px;
+}
+.introduce_item_link {
+    color:white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/*Phần công cụ*/
+.tool {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 6.5%;
+}
+.logo {
+    display:flex;
+    width: 200px;
+    text-decoration: none;
+}
+.logo_img {
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo_title {
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.logo_title1 {
+    font-weight: 700;
+    color: #00483d;
+}
+.logo_title2 {
+    color: transparent; 
+  -webkit-text-stroke: 1px #00483d; 
+}
+.search {
+    flex: 0 0 65%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.search_bar {
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    height: 100%;    
+    width: 100%;
+    color: gray;
+    padding-left: 10px;
+}
+.search_btn {
+    position: absolute;
+    background-image: linear-gradient(to bottom, #20f0e5, #00483c); 
+    border-radius: 48%;
+    height: 40px;
+    width: 45px;
+    right: 22.5%;
+}
+.search_btn:hover{
+    transition: 0.3s;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.order_check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00483d;
+    text-decoration: none;
+    border-radius: 15px;
+    width: 150px;
+    padding-left: 8px;
+    height: 45px;
+}
+
+.order_check_title{
+    color: white;
+    font-weight: 100;
+    margin-left: 10px;
+    word-wrap: break-word;
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+}
+
+/*Menu*/
+
+.menu_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00483d;
+    padding-top: 25px;
+    padding-bottom: 18px;
+    margin: 0 6.5%;
+    border-radius: 10px;
+}
+
+.menu_item{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 11.111111%;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.menu_item:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+.menu_item_link {
+    text-decoration: none;
+}
+.menu_item-title{
+    margin-top: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+
