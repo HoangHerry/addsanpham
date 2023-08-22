@@ -75,10 +75,12 @@ html{
     width: 100%;
     color: gray;
     padding-left: 10px;
+    border: 1px solid gainsboro;
 }
 .search_btn {
     position: absolute;
-    background-image: linear-gradient(to bottom, #20f0e5, #00483c); 
+    background-image: linear-gradient(to bottom, #20f0e5, #00483c);
+    border: none; 
     border-radius: 48%;
     height: 40px;
     width: 45px;
@@ -97,7 +99,7 @@ html{
     background-color: #00483d;
     text-decoration: none;
     border-radius: 15px;
-    width: 150px;
+    width: 12%;
     padding-left: 8px;
     height: 45px;
 }
