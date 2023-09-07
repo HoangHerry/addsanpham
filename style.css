@@ -504,7 +504,11 @@ html{
 }
 .prodcut_selection_item {
     background-color: #00483d;
-    padding:3px 14px;
+    width: 30%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 3px;
     border: none;
 }
@@ -519,6 +523,175 @@ html{
     right: -60px;
     z-index: 1;
 }
+
+.service {
+    margin: 40px auto ;
+    width: 1200px;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+.service_item {
+    width: 20%;
+    border-radius: 5px;
+    border: #00483d 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    height: 70px;
+    background-color: transparent;
+    color: #00483d;
+
+}
+.service_item:hover {
+    background-color: #00483d;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.item_desc{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    align-items: start;
+}
+.item_desc h3{
+    font-weight: 500;
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+
+}
+.item_desc h2{
+    font-weight: 550;
+    display: flex;
+    width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+.contact {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.contact_logo {
+    width: 12%;
+}
+.contact_info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact_sendMail {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.contact_sendMail input{
+    width: 100%;
+    height: 50px;
+    background-color: #e6e6e6;
+    border: none;
+    border-radius: 9px ;
+    padding-left: 14px;
+    position: relative;
+}
+
+.sendMail_btn {
+    position: absolute;
+    background-color: #00483d;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    right: 0;
+    border: none;
+    border-radius: 9px;
+    color: white;
+    transition: 0.4s;
+}
+.sendMail_btn:hover{
+    cursor: pointer;
+    background-color: #009981;
+}
+
+footer{
+    background-color: #00483d;
+    color: #ddd;
+    width: 1200px;
+    max-width: 90%;
+    display: flex;
+    margin: 40px auto 5px auto;
+    padding: 10px 0;
+    border-radius: 6px;
+}
+.item {
+    width: 20%;
+    margin: 0 10px; 
+}
+.item ul{list-style: none;}
+.item a{
+    text-decoration: none;
+    color: #ddd;
+}
+.item h3:hover,.item a:hover{
+    color: white;
+}
+.item button{
+    width: 100%;
+    height: 40px;
+    font-size: medium;
+    color: #00483d;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+}
+.item button:hover {
+    cursor: pointer;
+}
+
+.item_img-pay {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.item_img-pay img{
+    width: 46%;
+    height: 35px;
+    margin: 3px 3px;
+}
+.item--ship{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px -3px;
+}
+
+.item_img-ship {
+    width: 46%;
+    margin: 0 3px;
+}
+.item_img-ship img{
+    width: 100%;
+}
+.item_link--recognize {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item_link--recognize img{
+    width: 80%;
+}
+
 
 
 
