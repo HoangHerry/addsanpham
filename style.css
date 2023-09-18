@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 html{
-    background-image: url(./more-leaves.png);
+    background-color: #f4f4f4;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .introduce {
@@ -16,7 +16,6 @@ html{
     left:0;
     right: 0;
     z-index: 3;
-
 }
 .introduce_list {
     list-style: none;
@@ -301,6 +300,7 @@ html{
     box-shadow: 0 4px 5px rgb(172, 172, 172);
     padding:15px 10px;
     background-color: white;
+    z-index: 1;
 }
 .category_item {
     flex: 0 0 50%;
