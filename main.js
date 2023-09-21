@@ -1,44 +1,109 @@
-var container = document.querySelector(".temp123");
+var ProductSlide1 = document.querySelector('.product_item--display')
+var ProductSlide2 = document.querySelector('.product--slides')
 var isDragging = false;
 var startX = 0;
 var scrollLeft = 0;
-container.scrollLeft = 255;
-var list = document.querySelectorAll('.item123');
-var animationFrame;
+var listSlide1 = document.querySelectorAll('.product_item--display img')
+var listSlide2 = document.querySelectorAll('.product_list--item')
 
-container.addEventListener("mousedown", (e) => {
+ProductSlide2.scrollLeft = listSlide2[0].offsetWidth;
+ProductSlide1.scrollLeft = listSlide1[0].offsetWidth * 3;
+//Vuốt slide1
+//Vuốt slide2
+ProductSlide2.addEventListener("mousedown", (e) => {
   isDragging = true;
-  startX = e.pageX - container.offsetLeft;
-  scrollLeft = container.scrollLeft;
-  console.log('container_scrolleft' + container.scrollLeft);
-  console.log('scrolleft' + scrollLeft);
-  vitriitem1 = 0;
+  startX = e.pageX - ProductSlide2.offsetLeft;
+  scrollLeft = ProductSlide2.scrollLeft;
 });
-
-container.addEventListener("mouseleave", () => {
+ProductSlide2.addEventListener("mouseleave", () => {
   isDragging = false;
 });
-container.addEventListener("mouseup", () => {
+ProductSlide2.addEventListener("mouseup", () => {
   isDragging = false;
 });
 
-container.addEventListener("mousemove", (e) => {
+ProductSlide2.addEventListener("mousemove", (e) => {
   if (!isDragging) return;
   e.preventDefault();
-  const x = e.pageX - container.offsetLeft;
+  const x = e.pageX - ProductSlide2.offsetLeft;
   const walk = (x - startX); 
-  container.scrollLeft = scrollLeft - walk;
-  console.log('after' + container.scrollLeft);
+  ProductSlide2.scrollLeft = scrollLeft - walk;
+  console.log('after' + ProductSlide2.scrollLeft);
 });
-var btnLeft = document.querySelector('.btn_lefttemp');
-var btnRight = document.querySelector('.btn_righttemp');
-btnRight.addEventListener('mousedown', function () {
-  var list = document.querySelectorAll('.item123');
-  var slide = document.querySelector('.test1');
-  slide.appendChild(list[0]);
-  list[2].classList.remove('border_green');
-  list[3].classList.add('border_green');
-  container.scrollLeft = 255;
-  console.log(container.scrollLeft);
-});
+
+//Click buton slide 2
+var btnLeftPd2 = document.querySelector('.list_direction--left i')
+var btnRightPd2 = document.querySelector('.list_direction--right i')
+btnRightPd2.addEventListener('mousedown', function(){
+  listSlide2 = document.querySelectorAll('.product_list--item')
+  document.querySelector('.product_list--slides').appendChild(listSlide2[0]);
+  listSlide2[3].classList.remove('active--border_green');
+  listSlide2[4].classList.add('active--border_green');
+  clickBtnright_ofImgPr()
+  ProductSlide2.scrollLeft = listSlide2[0].offsetWidth;
+})
+function clickButtonRight_OfSlides(){
+  listSlide2 = document.querySelectorAll('.product_list--item')
+  document.querySelector('.product_list--slides').appendChild(listSlide2[0]);
+  listSlide2[3].classList.remove('active--border_green');
+  listSlide2[4].classList.add('active--border_green');
+  ProductSlide2.scrollLeft = listSlide2[0].offsetWidth;
+}
+btnLeftPd2.addEventListener('mousedown', function(){
+  listSlide2 = document.querySelectorAll('.product_list--item')
+  document.querySelector('.product_list--slides').prepend(listSlide2[listSlide2.length - 1]);
+  listSlide2[3].classList.remove('active--border_green');
+  listSlide2[2].classList.add('active--border_green');
+  clickBtnleft_ofImgPr()
+  ProductSlide2.scrollLeft = listSlide2[0].offsetWidth;
+})
+function clickButtonLeft_OfSlides(){
+  listSlide2 = document.querySelectorAll('.product_list--item')
+  document.querySelector('.product_list--slides').prepend(listSlide2[listSlide2.length - 1]);
+  listSlide2[3].classList.remove('active--border_green');
+  listSlide2[2].classList.add('active--border_green');
+  ProductSlide2.scrollLeft = listSlide2[0].offsetWidth;
+
+}
+
+
+
+
+
+var computedStyle = window.getComputedStyle(btnLeftPd2)
+var displayValue = computedStyle.getPropertyValue('display');
+console.log(displayValue)
+
+var btnLeftPd1 = document.querySelector('.product_direction .left')
+var btnRightPd1 = document.querySelector('.product_direction .right')
+console.log(btnRightPd1)
+btnRightPd1.addEventListener('click',function(){
+  listSlide1 = document.querySelectorAll('.product_item--display img')
+  document.querySelector('.product_slides--display').appendChild(listSlide1[0])
+  ProductSlide1.scrollLeft = listSlide1[0].offsetWidth * 3;
+  clickButtonRight_OfSlides()
+})
+btnLeftPd1.addEventListener('click',function(){
+  listSlide1 = document.querySelectorAll('.product_item--display img')
+  document.querySelector('.product_slides--display').prepend(listSlide1[listSlide1.length - 1])
+  ProductSlide1.scrollLeft = listSlide1[0].offsetWidth * 3;
+  clickButtonLeft_OfSlides()
+})
+function clickBtnleft_ofImgPr(){
+  listSlide1 = document.querySelectorAll('.product_item--display img')
+  document.querySelector('.product_slides--display').prepend(listSlide1[listSlide1.length - 1])
+  ProductSlide1.scrollLeft = listSlide1[0].offsetWidth * 3;
+}
+function clickBtnright_ofImgPr(){
+  listSlide1 = document.querySelectorAll('.product_item--display img')
+  document.querySelector('.product_slides--display').appendChild(listSlide1[0])
+  ProductSlide1.scrollLeft = listSlide1[0].offsetWidth * 3;
+}
+
+setInterval(function(){
+  clickBtnright_ofImgPr()
+  clickButtonRight_OfSlides()
+},1500)
+
+
 
