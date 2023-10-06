@@ -1,12 +1,20 @@
-/*Phần giới thiệu */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+.display{
+    display: block;
+}
+html
+{
     background-color: #f4f4f4;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+}
+.menu_icon{
+    display: none;
 }
 .introduce {
     padding: 5px 0;
@@ -22,6 +30,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .introduce_item {
     padding: 0 5px;
@@ -38,19 +47,20 @@ html{
     padding-top: 15px;
     padding-bottom: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin-left:  6.5%;
-    margin-right:  6.5%;
-    margin-top: 20px;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 100%;
 }
 .logo {
     display:flex;
     width: 200px;
     text-decoration: none;
+    margin-right: 6px;
 }
 .logo_img {
-    flex: 0 0 30%;
+    width: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,13 +80,13 @@ html{
   -webkit-text-stroke: 1px #00483d; 
 }
 .search {
-    flex: 0 0 65%;
+    width: 65%;
     height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-
+    margin-right: 10px;
 }
 
 .search_bar {
@@ -92,10 +102,11 @@ html{
     position: absolute;
     background-image: linear-gradient(to bottom, #20f0e5, #00483c);
     border: none; 
-    border-radius: 48%;
-    height: 40px;
+    border-radius: 15px;
+    height: 100%;
     width: 45px;
     right: 0;
+    
 }
 .search_btn:hover{
     transition: 0.3s;
@@ -113,6 +124,8 @@ html{
     width: 140px;
     padding-left: 8px;
     height: 45px;
+    margin-right: 10px;
+    
 }
 
 .order_check_title{
@@ -133,14 +146,16 @@ html{
 /*Menu*/
 
 .menu_list{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #00483d;
     padding-top: 25px;
     padding-bottom: 18px;
-    margin: 0 6.5%;
+    margin: 0 auto;
     border-radius: 10px;
+    width: 100%;
 }
 
 .menu_item{
@@ -187,6 +202,8 @@ html{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     font-weight: 300;
+    font-size: x-small;
+    
 }
 
 
@@ -277,7 +294,6 @@ html{
 }
 
 .menu{
-    position: relative;
 }
 /*category*/
 .category::after{
@@ -293,9 +309,9 @@ html{
     position: absolute;
     display: none;
     height: 366px;
-    top:85px;
-    left: 6.5%;
-    right: 6.5%;
+    top:80px;
+    left: 0;
+    right: 0;
     border-radius: 10px;
     box-shadow: 0 4px 5px rgb(172, 172, 172);
     padding:15px 10px;
@@ -359,18 +375,23 @@ html{
 
 /*main*/
 .banner {
-    margin: 8px 6.5%;
+    margin: 14px auto;
 }
 .banner_slide {
     width: 100%;
-    height: 375px;
+    aspect-ratio: 2/1;
     border: none;
     border-radius: 6px;
+    margin: 0 auto;
+    margin-top:20px;
 }
 .banner_slide_img {
     width: 100%;
     height: 100%;
     border-radius: 11px;
+}
+.banner_slide_img img{
+    width: 100%;
 }
 .banner_selection {
     margin: 20px 0;
@@ -419,15 +440,18 @@ html{
     background: transparent linear-gradient(180deg,#0d9984 0%,#00483d 100%);
 }
 .banner_item {
-    margin: 20px 0;
-    display:flex;
-    height:180px;
-    justify-content: space-between;
+    width: 100%;
 }
 .banner_item_img {
-    border-radius: 6px;
-    width: 24.7%;
-
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 140px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.search--inMobile{
+    display: none;
 }
 .title_sale {
     background: transparent linear-gradient(180deg,#0d9984 0%,#00483d 100%);
@@ -439,7 +463,8 @@ html{
     border-top-right-radius: 26px;
     border-top-left-radius: 3px;
     height: 28px;
-    margin: 20px 0;
+    margin-top:10px;
+    margin-bottom: 30px;
 }
 .title_sale_name {
     color: white;
@@ -448,18 +473,13 @@ html{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .product {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 .product_item {
     background-image: url(https://scr.vn/wp-content/uploads/2020/07/N%E1%BB%81n-h%E1%BB%93ng-xanh-%C4%91%E1%BA%B9p-cho-%C4%91i%E1%BB%87n-tho%E1%BA%A1i.jpg);
-    flex: 0 0 23.5%;
-    padding: 10px 0;
     position: relative;
     border: none;
     border-radius: 6px;
+    margin-bottom: 30px;
 
 }
 .product_item_img {
@@ -482,15 +502,26 @@ html{
 .product_cost_new {
     color: red;
     font-weight: 600;
+    font-size: small;
+
 }
 .product_cost_old {
     font-weight: 400;
     text-decoration: line-through;
+    font-size: small;
+
 }
 .product_sale {
     font-weight: 400;
+    font-size: small;
 }
-.product_sale img{
+.product_hot_sale{
+    position: absolute;
+    top: -40px;
+    right: -60px;
+    z-index: 1;
+}
+.product_hot_sale img{
     width: 100px;
 }
 .product_selection {
@@ -504,43 +535,38 @@ html{
 }
 .prodcut_selection_item {
     background-color: #00483d;
-    width: 30%;
-    height: 30px;
+    flex:0 0 32%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 3px;
     border: none;
+    height: 30px;
 }
 .prodcut_selection_item a{
     text-decoration: none;
     color: white;
     font-weight: 500;
+    font-size: small;
 }
 .product_sale_img {
-    position: absolute;
-    top: -40px;
-    right: -60px;
-    z-index: 1;
+    
 }
 
 .service {
-    margin: 40px auto ;
-    width: 1200px;
-    max-width: 90%;
-    display: flex;
-    justify-content: space-around;
 }
+
 .service_item {
-    width: 20%;
     border-radius: 5px;
     border: #00483d 2px solid;
     display: flex;
     align-items: center;
     justify-content:space-evenly;
     height: 70px;
+    width: 80%;
     background-color: transparent;
     color: #00483d;
+    margin: 0 auto;
 
 }
 .service_item:hover {
@@ -557,13 +583,14 @@ html{
 }
 .item_desc h3{
     font-weight: 500;
-    font-size: 15px;
+    font-size: small;
     width: 100%;
     display: flex;
     justify-content: start;
 
 }
 .item_desc h2{
+    font-size: small;
     font-weight: 550;
     display: flex;
     width: 100%;
@@ -572,24 +599,20 @@ html{
     justify-content: start;
 }
 .contact {
-    width: 1200px;
-    max-width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    margin: 20px 0;
 }
 .contact_logo {
-    width: 12%;
 }
 .contact_info {
-    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: medium;
+    text-align: center;
+    height: 130px;
 }
 .contact_sendMail {
-    width: 25%;
     display: flex;
     align-items: center;
     position: relative;
@@ -622,20 +645,16 @@ html{
     cursor: pointer;
     background-color: #009981;
 }
-
 footer{
     background-color: #00483d;
+}
+.footer{
     color: #ddd;
-    width: 1200px;
-    max-width: 90%;
-    display: flex;
-    margin: 40px auto 5px auto;
-    padding: 10px 0;
     border-radius: 6px;
 }
+
 .item {
-    width: 20%;
-    margin: 0 10px; 
+    margin: 10px 10px;
 }
 .item ul{list-style: none;}
 .item a{
@@ -667,19 +686,23 @@ footer{
     width: 46%;
     height: 35px;
     margin: 3px 3px;
+    object-fit: contain;
 }
 .item--ship{
     display: flex;
     flex-wrap: wrap;
-    margin: 3px -3px;
+    height: 130px;
 }
 
 .item_img-ship {
     width: 46%;
+    height: 37%;
     margin: 0 3px;
 }
 .item_img-ship img{
     width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .item_link--recognize {
     width: 100%;
@@ -687,12 +710,16 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 53%;
+
 }
 .item_link--recognize img{
     width: 80%;
+    height: 100%;
+    object-fit: contain;
 }
 
-
-
-
+.item h3{
+    margin-bottom: 10px;
+}
 

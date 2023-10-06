@@ -63,11 +63,7 @@ function clickButtonLeft_OfSlides(){
   listSlide2[3].classList.remove('active--border_green');
   listSlide2[2].classList.add('active--border_green');
   ProductSlide2.scrollLeft = listSlide2[0].offsetWidth;
-
 }
-
-
-
 
 
 var computedStyle = window.getComputedStyle(btnLeftPd2)
@@ -100,10 +96,10 @@ function clickBtnright_ofImgPr(){
   ProductSlide1.scrollLeft = listSlide1[0].offsetWidth * 3;
 }
 
-setInterval(function(){
-  clickBtnright_ofImgPr()
-  clickButtonRight_OfSlides()
-},1500)
+
+//
+
+
 
 
 
